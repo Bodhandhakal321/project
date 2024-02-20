@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="username">Username</label>
+    <input type="text" id="username"> <br>
+    <p id="p1"></p>
+    <label for="password">Password</label> 
+    <input type="password" id="password"> <br>
+    <p id="p2"></p>
+    <label for="cpassword">Confirm password</label> 
+    <input type="password" id="cpassword"> 
+    <p id="p3"></p>
+    <label for="phone">PhoneNumber</label> 
+    <input type="number" id="phone"> <br>
+    <p id="p4"></p>
+    <label for="gender">Gender</label> 
+    <input type="radio" name="g" id=""><label for="">male</label> 
+    <input type="radio" name="g" id=""><label for="">female</label> <br>
+     <label for="country">Country</label>   
+     <select name="" id=""> <br>
+        <option value="">Nepal</option>
+        <option value="">Us</option>
+        <option value="">Uk</option>
+     </select>
+     <p id="p5"></p> <br>
+     <label for="program">Program</label>
+     <label for="">BBM</label> <input type="checkbox" id="" name="a">
+     <label for="">BCA</label> <input type="checkbox" id="" name="a">
+     <label for="">BIT</label> <input type="checkbox" id="" name="a">
+     <p id="p6"></p> <br>
+     <button id="btn"> submit</button>
+     <script>
+        let username = document.querySelector('#username');
+        let password = document.querySelector('#password');
+        let cpassword = document.querySelector('#cpassword');
+        let phone = document.querySelector('#phone');
+        let para = document.querySelector('#p1');
+        let para2 = document.querySelector('#p2');
+        let para3 = document.querySelector('#p3');
+        let para4 = document.querySelector('#p4');
+        let para5 = document.querySelector('#p5');
+        let para6 = document.querySelector('#p6');
+        let btn = document.querySelector('#btn').addEventListener('click',function(){
+            if(username.value==''){
+                para.textContent='please enter your username';
+                para.style.color='red';
+            }
+            else if(username.value.length<=5){
+                para.textContent='increase the character';
+            }
+            if(password.value=== cpassword){
+                
+            }
+                
+        });
+        
+
+
+     </script>
+    
+
+
+
+    
+</body>
+</html>

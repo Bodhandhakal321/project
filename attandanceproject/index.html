@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="atten.css">
+</head>
+<body>
+    <div class="add">
+        <input  id="pa" type="text" placeholder="add name"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="btn">ADD</button>
+    </div>
+    <br><br>
+    <style>
+        table{
+            border-collapse:collapse;
+            width: 30%;
+            margin-top: 5rem;
+            color: rgb(65, 67, 66);
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        } 
+        </style>
+        <div class="cont">
+    <table border="2px solid black" id="mytable">
+        <tr>
+            <td>S.N</td>
+            <td>Students Full Name</td>
+            <td>Present
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr id="row">
+            <td>1</td>
+            <td>Bodhan Dhakal</td>
+            <td><input type="checkbox"></td>
+        </tr>
+    </table>
+</div>
+   
+    <script>
+let  para =document.querySelector('#pa');
+let bttn = document.querySelector('#btn')
+
+
+let table = document.querySelector('#mytable');
+
+let serialNumber = 2;
+
+bttn.addEventListener('click',function(){
+let newRow = table.insertRow();
+let cell1 = newRow.insertCell(0);
+let cell2 = newRow.insertCell(1);
+let cell3 = newRow.insertCell(2);
+cell1.innerHTML = serialNumber++;
+cell2.innerHTML = para.value;
+cell3.innerHTML = '<input type="checkbox">';
+para.value = '';
+})
+let present = document.querySelector('input[type="checkbox"]');
+present.addEventListener('change', function() {
+  let checkboxes = document.querySelectorAll('#mytable input[type="checkbox"]');
+  checkboxes.forEach(function(checkbox) {
+    checkbox.checked = present.checked;
+  });
+});
+    </script>
+</body>
+</html>

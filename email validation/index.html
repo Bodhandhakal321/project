@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="email">Email</label> 
+    <input type="email" id="email" placeholder="email"> <br> <br>
+    <button id="submit">Submit</button> 
+    <script>
+        function isValidEmail(str){
+            let atRate= str.indexOf("@")
+            let dot= str.indexOf(".")
+            if(atRate==-1 || dot== -1|| atRate<4|| dot - atRate<3 || str.length- dot<3){
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
